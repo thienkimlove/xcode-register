@@ -46,7 +46,7 @@ class RegisterViewController: UIViewController {
         
         let actionConfirm  = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { action in
             
-            self.dismiss(animated: true, completion: nil);
+            self.performSegue(withIdentifier: "backToLogin", sender: self);
         }
         
         confirmAlert.addAction(actionConfirm);
