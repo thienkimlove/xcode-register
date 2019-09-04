@@ -14,7 +14,22 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        let isLogin = UserDefaults.standard.bool(forKey: "isLogin");
+        
+        if (!isLogin) {
+            self.performSegue(withIdentifier: "loginView", sender: self)
+        }
+    }
 
-
+    @IBAction func logoutButtonTapped(_ sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "isLogin");
+        UserDefaults.standard.synchronize();
+        self.performSegue(withIdentifier: "loginView", sender: self)
+        
+    }
+    
 }
 

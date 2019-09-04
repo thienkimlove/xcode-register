@@ -12,9 +12,12 @@
 		A42BE23C231FA30B00887930 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42BE23A231FA30B00887930 /* Main.storyboard */; };
 		A42BE23E231FA30C00887930 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A42BE23D231FA30C00887930 /* Assets.xcassets */; };
 		A42BE241231FA30C00887930 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42BE23F231FA30C00887930 /* LaunchScreen.storyboard */; };
+		A42BE249231FA81700887930 /* CustomLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42BE248231FA81700887930 /* CustomLoginViewController.swift */; };
+		A42BE24B231FA86C00887930 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42BE24A231FA86C00887930 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A42271F9231FBDA0008B5197 /* Register.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Register.entitlements; sourceTree = "<group>"; };
 		A42BE233231FA30B00887930 /* Register.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Register.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A42BE236231FA30B00887930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A42BE238231FA30B00887930 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,8 @@
 		A42BE23D231FA30C00887930 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A42BE240231FA30C00887930 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A42BE242231FA30C00887930 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A42BE248231FA81700887930 /* CustomLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoginViewController.swift; sourceTree = "<group>"; };
+		A42BE24A231FA86C00887930 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +59,15 @@
 		A42BE235231FA30B00887930 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				A42271F9231FBDA0008B5197 /* Register.entitlements */,
 				A42BE236231FA30B00887930 /* AppDelegate.swift */,
 				A42BE238231FA30B00887930 /* ViewController.swift */,
 				A42BE23A231FA30B00887930 /* Main.storyboard */,
 				A42BE23D231FA30C00887930 /* Assets.xcassets */,
 				A42BE23F231FA30C00887930 /* LaunchScreen.storyboard */,
 				A42BE242231FA30C00887930 /* Info.plist */,
+				A42BE248231FA81700887930 /* CustomLoginViewController.swift */,
+				A42BE24A231FA86C00887930 /* RegisterViewController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -96,6 +104,11 @@
 				TargetAttributes = {
 					A42BE232231FA30B00887930 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,8 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A42BE249231FA81700887930 /* CustomLoginViewController.swift in Sources */,
 				A42BE239231FA30B00887930 /* ViewController.swift in Sources */,
 				A42BE237231FA30B00887930 /* AppDelegate.swift in Sources */,
+				A42BE24B231FA86C00887930 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +297,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Register/Register.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VU737A2V69;
 				INFOPLIST_FILE = Register/Info.plist;
@@ -300,6 +316,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Register/Register.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VU737A2V69;
 				INFOPLIST_FILE = Register/Info.plist;
