@@ -11,3 +11,4 @@
 
 * `https://www.raywenderlich.com/5352-testflight-tutorial-ios-beta-testing`
 *  UI Design for Android Studio App `https://www.youtube.com/watch?v=E6c3DGnvefY`
+https://viblo.asia/p/tung-buoc-de-day-apps-len-testflight-yMnKMg0zl7P
