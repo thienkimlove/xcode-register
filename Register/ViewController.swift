@@ -17,19 +17,23 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        let isLogin = UserDefaults.standard.bool(forKey: "isLogin");
+        let loginToken = UserDefaults.standard.string(forKey: "loginToken");
         
-        if (!isLogin) {
+        if (loginToken == nil) {
             self.performSegue(withIdentifier: "loginView", sender: self)
         }
     }
 
     @IBAction func logoutButtonTapped(_ sender: Any) {
-        UserDefaults.standard.removeObject(forKey: "isLogin");
+        UserDefaults.standard.removeObject(forKey: "loginToken");
         UserDefaults.standard.synchronize();
         self.performSegue(withIdentifier: "loginView", sender: self)
         
     }
     
+    @IBAction func testLoginTapped(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "loginView", sender: self)
+    }
 }
 

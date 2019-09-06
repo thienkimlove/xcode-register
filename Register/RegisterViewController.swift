@@ -53,9 +53,6 @@ class RegisterViewController: UIViewController {
         let  params : Parameters = ["email": userEmail,"password": userPassword];
         
         
-        var registerSuccess : Bool = false;
-        
-     
         AF.request(URL(string: "http://127.0.0.1:8000/api/signup")!, method: .post, parameters: params, headers: _headers).responseJSON { response in
             
             // check for errors
