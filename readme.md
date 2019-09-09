@@ -30,6 +30,8 @@ Best about keyword
 
 Best about author
 
+
+
 defer : sử dụng khi muốn đảm bảo thực thi 1 đoạn code nào đó ngay khi hàm kết thúc.
 
 ```
